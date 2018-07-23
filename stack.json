@@ -1,7 +1,7 @@
 [
         {
         "name": "ZeroStack",
-        "type": "CatalogStack",
+        "entity": "CatalogStack",
         "description": "Base OS with no add on packages",
         "readMe": "ZeroStack's cloud software converts a cluster of servers into a web-managed private cloud. This on premises cloud provides self-service consumption, monitoring, and an integrated learning engine for performance and efficiency insight. ZeroStack enables multitenant, multi-cloud, and containerized environments with a future-ready architecture.Bare Metal to Cloud ZeroStack's software creates a highly reliable web-scale cluster that pools all resources while adding a layer of service monitoring. The Operating System (OS), KVM hypervisor & cloud services are all included. All of this is self-healing and doesn't require cloud experts to build it.HARDWARE CHOICE Dell, Cisco UCS, HPE, Lenovo, SuperMicro -- bring your own hardware (BYOH).ZeroStack provides a controlled and risk-free migration path from VMware.",
         "type": "Instance",
