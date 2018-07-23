@@ -1,4 +1,5 @@
-{
+[
+        {
         "name": "ZeroStack",
         "type": "CatalogStack",
         "description": "Base OS with no add on packages",
@@ -25,3 +26,4 @@
         ],
         "parameters": []
     }
+        ]
