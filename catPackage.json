@@ -1,7 +1,8 @@
 [
  {
-         "entity": "CatalogPackage",
+     
         "name": "Tomcat 9",
+  "entity": "CatalogPackage",
         "type": "Application",
         "version": 9.0,
         "description": "Apache Tomcat is an open source implementation of the Java Servlet and JavaServer Pages technologies",
