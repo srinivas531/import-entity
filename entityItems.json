@@ -73,7 +73,7 @@
        
         "keyName": "AeroProd-KP",
         "entity": "KeyPair",
-        "keyDescription": "KeyPair for RP1 In cryptography, a private key (secret key) is a variable that is used with an algorithm to encrypt and decrypt code. ...Most cryptographic processes use symmetric encryption to encrypt data transmissions but use asymmetric encryption to encrypt and exchange the secret key.",
+        "keyDescription": "KeyPair for RP1 In cryptography, a private key (secret key) is a variable that is used with an algorithm to encrypt and decrypt code. ...Most cryptographic processes use symmetric encryption to encrypt data transmissions but use asymmetric encryption to encrypt and exchange the secret key."
     },
    {
         "entity": "MetaData",
