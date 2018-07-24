@@ -1,6 +1,6 @@
 [
  {
-         "type": "CatalogPackage",
+         "entity": "CatalogPackage",
         "name": "Tomcat 9",
         "type": "Application",
         "version": 9.0,
