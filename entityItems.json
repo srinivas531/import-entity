@@ -2,7 +2,7 @@
    {
         "entity": "CatalogContainer",
         "version": 1,
-        "name": "Elastic Search latest",
+        "name": "Elastic Search srinivas",
         "description": "Elasticsearch is a powerful open source search and analytics engine that makes data easy to explore.",
         "parameters": [],
         "optional": [],
@@ -36,7 +36,7 @@
     "topic": "Useful Links",
     "link": "http://prodcloud.stackdc.io",
     "accessType": "Public",
-    "linkTitle": "StackAero Production link",
+    "linkTitle": "StackAero Production srinivas",
     "linkDescription": "StckAero Prod link"
    },
   {     
@@ -48,7 +48,7 @@
                 "name": "github_url"
             }
         ],
-        "name": "github job template srinivas",
+        "name": "github job template srinivas1",
         "description": "github maven job template used to work with different type of github project",
         "templateData": "<?xml version='1.0' encoding='UTF-8'?>\n<maven2-moduleset plugin=\"maven-plugin@2.15.1\">\n    <actions/>\n    <description></description>\n    <keepDependencies>false</keepDependencies>\n    <properties>\n        <com.sonyericsson.rebuild.RebuildSettings plugin=\"rebuild@1.25\">\n            <autoRebuild>false</autoRebuild>\n            <rebuildDisabled>false</rebuildDisabled>\n        </com.sonyericsson.rebuild.RebuildSettings>\n    </properties>\n    <scm class=\"hudson.plugins.git.GitSCM\" plugin=\"git@3.2.0\">\n        <configVersion>2</configVersion>\n        <userRemoteConfigs>\n            <hudson.plugins.git.UserRemoteConfig>\n                <url>{{github_url}}</url>\n            </hudson.plugins.git.UserRemoteConfig>\n        </userRemoteConfigs>\n        <branches>\n            <hudson.plugins.git.BranchSpec>\n                <name>*/master</name>\n            </hudson.plugins.git.BranchSpec>\n        </branches>\n        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>\n        <submoduleCfg class=\"list\"/>\n        <extensions/>\n    </scm>\n    <canRoam>true</canRoam>\n    <disabled>false</disabled>\n    <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>\n    <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>\n    <triggers/>\n    <concurrentBuild>false</concurrentBuild>\n    <rootModule>\n        <groupId>org.apache.slider</groupId>\n        <artifactId>slider-test</artifactId>\n    </rootModule>\n    <aggregatorStyleBuild>true</aggregatorStyleBuild>\n    <incrementalBuild>false</incrementalBuild>\n    <ignoreUpstremChanges>false</ignoreUpstremChanges>\n    <ignoreUnsuccessfulUpstreams>false</ignoreUnsuccessfulUpstreams>\n    <archivingDisabled>false</archivingDisabled>\n    <siteArchivingDisabled>false</siteArchivingDisabled>\n    <fingerprintingDisabled>false</fingerprintingDisabled>\n    <resolveDependencies>false</resolveDependencies>\n    <processPlugins>false</processPlugins>\n    <mavenValidationLevel>-1</mavenValidationLevel>\n    <runHeadless>false</runHeadless>\n    <disableTriggerDownstreamProjects>false</disableTriggerDownstreamProjects>\n    <blockTriggerWhenBuilding>true</blockTriggerWhenBuilding>\n    <settings class=\"jenkins.mvn.DefaultSettingsProvider\"/>\n    <globalSettings class=\"jenkins.mvn.DefaultGlobalSettingsProvider\"/>\n    <reporters/>\n    <publishers>\n        <hudson.tasks.ArtifactArchiver>\n            <artifacts>target/**/*</artifacts>\n            <allowEmptyArchive>false</allowEmptyArchive>\n            <onlyIfSuccessful>false</onlyIfSuccessful>\n            <fingerprint>false</fingerprint>\n            <defaultExcludes>true</defaultExcludes>\n            <caseSensitive>true</caseSensitive>\n        </hudson.tasks.ArtifactArchiver>\n       \n           \n    </publishers>\n    <buildWrappers/>\n    <prebuilders/>\n    <postbuilders/>\n    <runPostStepsIfResult>\n        <name>FAILURE</name>\n        <ordinal>2</ordinal>\n        <color>RED</color>\n        <completeBuild>true</completeBuild>\n    </runPostStepsIfResult>\n</maven2-moduleset>",
         "context": "Tools",
@@ -62,16 +62,16 @@
         "category": "Technical Articles",
         "tag": "serverless",
         "source": "dzone",
-        "articleTitle": "A Short Introduction to Serverless Architecture Srinivas"
+        "articleTitle": "A Short Introduction to Serverless Architecture Srinivas1"
     },
    {
         "entity": "Environment",
         "environmentType": "Production",
-        "environmentName": "Srinivas"
+        "environmentName": "Srinivas1"
     },
     {
        
-        "keyName": "Srinivas",
+        "keyName": "Srinivas1",
         "entity": "KeyPair",
         "keyDescription": "KeyPair for RP1 In cryptography, a private key (secret key) is a variable that is used with an algorithm to encrypt and decrypt code. ...Most cryptographic processes use symmetric encryption to encrypt data transmissions but use asymmetric encryption to encrypt and exchange the secret key."
     },
@@ -79,7 +79,7 @@
         "entity": "MetaData",
         "metaDataType": "InstanceType",
         "metaDataContext": "Resource",
-        "name": "Srinivas",
+        "name": "Srinivas1",
         "value": "Node"
     },
    {
@@ -94,7 +94,7 @@
         "secret": {
             "password": true
         },
-        "providerName": "Srinivas Provider",
+        "providerName": "Srinivas Provider1",
         "providerCode": "srinivas",
         "providerType": "ldap",
         "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAaVBMVEUzerf///8td7ZelMQqdrUic7T5+/1Ih74fcrOwyeFsm8eFqtDJ2urd6PKcvNkacLKMsNM6f7r0+PtTjsGqxN7i7PSWttZ5ocrE1uhxnslFg7u2zOLt8/mIrdG+0eUJbLHS4O1mlsVQir+5gHWeAAAOvElEQVR4nN1d6ZqqOBCNMaFpW4mg4IYb7/+QwxbWhGwVvd+cP3dGbeGYUFWpVJ2glW8EQbq9HaP7Zl0URYwQist/15t7dLxt0yDwfn3k8buT9BydDnHIQkoJwRj1wJgQSst34sMpOqeJx7vwxTA979dXyigZ8hIBE8rIdb0/p57uxAfD/HaJSajkNuYZkvhyyz3cDTTD5LyPn5QYkOtB6DPen6FnLCjD/HFCzGjs5mPJ0OkBOpSADB8bFNoN3mQoQ7R5wN0WFMPdnoDQ4yTJfgd0ZyAMk98Dg6PXkmSHX5BHEoBhmsWhy7MnAw7jDOCJdGa4uxDqgV4DSi7Ok9WR4e79hJ6eY5Dn25GjE8PXhfmYnmNgdnl9iWF6sfTspiD04hDSWTNM9uDmc4Ej21svQmwZHrE/+yICxcePMnwV7KP8KrDC7nG0YRjcqX8DMwemd5upasHwjD47QXtQdP4Aw+T0+Qnag/0ZR3KmDLfXbw1gA3rd+mWYeYlATYBZ5pFhXoRf5lchLIzicROGW/TtAWyAkclMNWAY/QsD2IBGHhgGm3+HYDlTN9quUZdhfv1cFKoD8qP7MGoy3MUAj2Cd56Z1/huAYqy5btRjeHa9J0zYkx5OWRT9RlF2OhDmlnWsv1LP3mgxvD3dbobQItuOZ1W+zQrX9MfzBsXw6Ban0ViSGdxlsRtHprOi0mAYORHELJKHkknkliZgGl5DzTBzIhiul21evnZyQhohnJKhI0H1HbgFEmqKKoZuU5Tp2IKb2yVUE1XB0M3IaFkC3xdZZuj289I/LYKr1d7JpComyiLDs5MfxD+6sWPw4+T9n4uuf4nhzi0UZfprnJebxyVLAdwCw9wtFsVrbYKr1cbpx8TxgkuSMwyuboEjM0lvug7iwgMhZ+j2syJcGBBcrQ5uPyfZmDN0XdFTsyz80TEKD6VuUcZw67qip2bbRanrApvK7JqEYe54PdNJ6jxNS0isjYRh4Xo9ouvtOf5cB1H2m4oZZs5ZJ8PHcLX6dc6lS6J8IUPnh7C8nOlW2Mt9t0AcYogYJo6esMJimCFC6n5NfBWttUUMTxCbL6aVMAnANYWhvoDhGWL7LDbezIwBrsoE+4tzhgHAlRC6mhJcXUGuO/9h5wzvIBuEX2JI72qGADatwrfGkM5s+Iyhs69v8C2Gc78/ZeiY/e3wLYbztM2EYQK1B2psSwMIW1oBT648YeiWExrC2B9CMaT7JYYpWCUJNq21S6GujNj40mOGF7Bt0LlNU8Ax7TUAucgZAnmKCgaJtvbacIVI4193xBBuCFH4a8jQLfk8wngQhwx3kPVcxmsLwGuz4cWHDN9w5TKiEFiBLdzvi99ihjvHvezhJUyzNBXcMzUdnoNBHDAEfAqp6VNY4QZn58hJxNA5nzcAs+kggHPGJcU+4OgZZoBllU+bfp4E8CemfVaqYwgWNVXANgxhlt4t4u4OOoa/kGVrzGoMIWtze3/cMQS0ZLPQUA85pDvGhylDUG+PQpsOyTNo8WNn7DjDPWjpoXFOv8Id9hb4IoozBK6tpBYMgW+BjBk+gMtjjQNvD7fwGDHcQFdwx6bWFCyLwYE3Q4bO24UzkLVhouYNX4OcDxhCzxBUFQ8YKCQktwKeYDtNG4YnD0XcmM3zzzLsnx76HNrwu2YIse8zh0FBDeDKdIikYwiy2ySA7jQFjYl7NLmimiGsu+8Q6majAPacRWicfs0QotVAdAXdyAY2mumAfzjDHC59MYamUwR3hRzPvGUImD4YI9RqF1g9fPVs0lvL8OKrJa1fwiwCdOE2RJ04rRj6miSamW/AbPcUccMQMgU1gVZWce2vq5GkNUPYlecYVL0U9nn58Fwz9OQNa2jUegNtqwtReUTkdZaM0npiRD57w6vAEa0SoA10CRTJ4dRvZ2rpkdEq9dtgj5drFtz6EJQoTQ3yFnZzLPaVwNUNiMHOJUOvD0KFhZzNzXf3NI1Khj5Wv5PLyPz+y/uly1Uw8hczdcCSwozUv4JBaUyRt8B+AEnvlbeIe4A4QMEHLiMJTz0GpB3CAEHuS8og8YmgWzGyS6fIUwZhfBlJ6PYBqZtwi7wtf3tIl4le48UG9IZcG450riLrSTr6nz/0iCLvPgkTWVYx9+8uSIQ85blaVHoYP/KF/rZgzK8yGrkj8F2nHpjSa6aqUXxFV+KRJN4gb087CYtMr6wmjQpAhd4x8BoVfr6ZkpNRl+yfL53XwgtDHKKj6Q5pckRexFB9MMT0YCdW/Th4eCALBL65HL5Ny4N7bNfginfg/Njanl/D8QPCvfbA4YLv08Xr5+vKhVLQWG8nRoUbrPok2DzFNIM61iDIIPTOGsRgtpQdII/gSNdQa0cob0GwTd3zEm4YJswBYhi+4c9QyWGEGguIuBRrqiWZ4gjgOMq41H1tQWInVfgF7GLnmVquLZzXh/Tt7yyjxHmmlutD1zW+QW2XDfaONrVc4zvmaZ4GarBWcBVtPDrm2iwqZU3h1kRAb275UuafoOMGVbh1ynmbSmtbwkXZkKUosP+F6El9dyD4s3+SwsBh78mqBc8O9juAceCwf2gsQWMP66Kmav/Qeg9YWUcCCdutePLnso//QYKrleVEq/fxLWsxjKWu3GDpFetaDMt6GuLzZM05LIvt63oau5oo8ilPwWFnLuqaKLt9yg9PUstC5qauza420Ui7EwJWDZJtbaJVgad019MXcpuZ1taX2rnTw/qzONjcZFsjbFfnjT8Nm5ts67z91ep/G12t/gcKTr6Drt/CW8/Mt8F4z4yvvqdvo+978lqt/0UMetd8F0J/CYP+Qz89pN9H30P6gUroL2DYB+yjl/v7GPVyw/fj/wsY9uPDayp8H2NNhf/jNJ3oYkALi/wDmGib/P+c/kyfBlZj6B/ATGNIP/WNSQ3xxzGdYKkwhn949pHZtyx+jfi7ZzpR2glJvP6rIfxFcPE7RpRtsOyEcvxuPzTtIsXr6bdEfwdmVgsm0PrS1aagbWWXMFWORYeh7DIk5Ngls6YbhES4cf4wqgUT6LXpau5xSUR9hmVAIToHum+9nIbFMrUJAy11kebeKtezpjYMhbvxgy6MyekdUj0N/WM3hLqJmtqXdgwFj/ngJibqvnLFEN0Vglj7UlO/1JLhrB92JIU7NltyhrrikRL9Uj2lHy2G6eVUYZ/d+nq3ybEg4VCldnwEC2e4a77lnj26zjC9+iaZBq2e19diuAsbp0lDcuGTcZJIGIm2B0KGW9Z+C4t56bFey6JUR1jrSdRj2H8R6Q5+Grk90hq7lv/I1nQMu2cXd9NOx5zKtaC19LxNGbYZr9VkKrbqmMFbMH3mDPtTx3Q0Jhb0vHUG0ZhhF14M3REPqh6sHcShrREwrPPz089JsKTJriPla86wUzUb3B1XH3rzqqqhNxEybB9bjc3ORV19DY0Dc4aICh625oZTzOkPg0YBwy6QVs/S5bMRNM63sGDIA9C+DJIv3spXuCEa0BcwfPI+I9XtKc+3UBc72oxhOyX7rdiwNY3lnOMR5MDK9d6Cv/Dk46J2aKozStTTwIZhNCHB51wt3RLPLjz1h/Gl68RRFv+oz5lRegwHht2rvMyhXs7wOdzbmi5qS2oM705p6zXOClKtUSwY8qeue5XLfdfWhUfJwZzhDMpsks55TyrhcIAx5JzaEIy0pqGzNVKGD3VEonNml2InCoAhn5ftWogbos6KyBiq2/f1zl1TFKzaMGwfu1d7h61tSZ6sxpP7Ou7NxQx3b6Ud1T07b/n8QwuGPPvcJtY54eS8bdFOLW5reksTVEjS9HWO1lRpZfTPP1w8LsTG4+9Gf0LlEgtjhtv2WzCmoU6HsFgv1fgcUguGPO/VVLVMAuMhWlsz8/h6MDmHdMnvmzPklNoiyFB+BE3ri0WRtxpmZ8kubCiaM+QGrnEO+LqgM9iot1kxxIbnAcu/3Zgh5YunZg4uloc3tsaKoemZzvJzuQ0ZYnZox6xdAPO1RFQcevy0LjEgtgzNz+WWnq3OGWatN+sQDhk2bz5Z/O7au5sh7BZ6o6o88jP8kAVDm7PVV4HYK3KG+W6C6n44w6B+JU2S/plr3T1rfePETtLWodTPqjnDJRHRhZ6CXFgMJj3KqVLukmeEuy9r/3+SEeo2Y6pMhzFDHC/U8y51TQgP7LNjmLcnA/BlxiyXwH1mlZAzZ7jUvbPYF7IV5PmtGL6uPOhu72VW8Mkju2ofypThc1GqYrnzRXBknwXD9MRjri7tNttA6P6ytDWGDCWahXoMBWmbkmEgRNowHL2WJPk2KvpNYP7HgvnP0vqdKq4pGdb/qVdir2qVV3Uvzbsbrz8S1O+OXinDtOdYy6t9Q2TD4v5r4u7PNQiqGpGV/VnZjOJipbmq+HyhKn3wln7t+lPZQafuQJtT/Ieg0aer0WPn0obrGcopqscQ7CRrcGjpcWj1Sd7+zWL+p5akkV4n6BZO8wcMGOtpUmn2uu7+uYYFHGs2Wut28+ZXZarroyA/us1z2v3KAYzkDxDCjfahZwYd2bJV/+eBpaq2bgxXW/+SsVrAyET3zqirPi/+hWEMC6P+VUPdgOzrqoZYkviFYrjawir+GYNeTZUZjbUfkr9vxnDsz1jowELd4oy+NYwUmR9Kb8NwFdz9KlRLgOnd8ORPa4ar1av4/FRlhZ3Iga0GyxF/dqpSbCtTYa0yE+xlXQYeQNjeZoK6MawKgdUbzzD86MVBWtNJKeh1+UAAgNnFSWXEUQtp9376HUfyfDsKbjmrPe1OvvTiUa1d7ywoBqBnlWexF31qHMYZgEYMiGJX8nsAN6yEHX5BpKigNMl2ewI4kDgkeyi9O0DVtccGgRxTQUK0sTt6QAhQXbn8cULMKfGICUOnB6hCE7RyXnLe/zDLSIBQ9rPfQuvA+dAGzG+XmIRGY4nLz8eXmw95LV/qh+l5v44JUzfw4nLkyHW9P8Nrnjfwqe+YpOfotI5DFlJKyGg/EGNCKC3fiden6Jz6VCj0r2AZBOn2dozum3VRFFVld1z+u97co+NtmwbWSwZt/AcBz9grPsuuhAAAAABJRU5ErkJggg==",
