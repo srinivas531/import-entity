@@ -67,7 +67,7 @@
     },
     {
         "entity": "Article",  
-        "code": "art-stack-02",
+        "code": "art-stack-05",
          "articleTitle": "Stacks Help Guide2",
         "status": "Published",
         "accessType": "Public",
@@ -78,7 +78,7 @@
     },
     {
         "entity": "Article",  
-        "code": "art-stack-03",
+        "code": "art-stack-06",
         "status": "Published",
          "articleTitle": "Stacks Help Guide3",
         "accessType": "Public",
