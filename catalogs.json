@@ -2,7 +2,7 @@
 [
    {
         "entity": "CatalogInstance",
-        "name": "CentOS 7 x86_65",
+        "name": "CentOS 7 x86_66",
         "code": "fi-cat-inst-123456",
         "description": "CentOS 7 x86_64 Instance with latest updates",
         "osName": "Cent OS",
