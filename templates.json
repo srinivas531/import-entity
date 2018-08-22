@@ -1,0 +1,884 @@
+[
+    {
+        "status": "Published",
+        "code": "tmp-01",
+        "name": "aws_network_zone",
+        "description": "aws_network_zone_template",
+        "context": "NetworkZone",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"description\": \"{{name}}\",\n  \"providerCode\": \"aws\",\n  \"network\": \"{{vpc}}\",\n  \"subnet\": \"{{subnet}}\",\n  \"region\": \"{{region}}\",\n  \"zone\": \"{{zone}}\"\n}",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "entity",
+                "name": "region",
+                "entityContext": "Region"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "vpc"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subnet"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "zone"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp02",
+        "type": "api",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"description\": \"{{name}}\",\n  \"providerCode\": \"azure\",\n  \"network\": \"{{vpc}}\",\n  \"subnet\": \"{{subnet}}\",\n  \"region\": \"{{region}}\",\n  \"zone\": \"{{zone}}\"\n}",
+        "name": "azure_network_zone",
+        "description": "azure_network_zone_template",
+        "context": "NetworkZone",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "entity",
+                "name": "region",
+                "entityContext": "Region"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "vpc"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "zone"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subnet"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "type": "api",
+        "code": "tmp03",
+        "name": "aws_provider_account",
+        "description": "aws_provider_account",
+        "context": "ProviderAccount",
+        "templateData": "{\n  \"providerAccountName\": \"{{name}}\",\n  \"launchType\": \"quick\",\n  \"providerCode\": \"aws\",\n  \"access_type\": \"RW\",\n  \"properties\":{\n    \"secret\":\"{{secret_key}}\",\n    \"accessKey\":\"{{access_key}}\",\n    \"defaultRegion\":\"{{default_region}}\",\n    \"description\":\"{{name}}\"\n  }\n}",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name",
+                "placeHolder": "enter provider account name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "secret_key",
+                "placeHolder": "enter secret key"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "access_key",
+                "placeHolder": "enter access key"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "default_region",
+                "placeHolder": "enter default region code"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp04",
+        "type": "api",
+        "name": "azure_provider_account",
+        "templateData": "{\n  \"providerAccountName\": \"{{name}}\",\n  \"launchType\": \"quick\",\n  \"providerCode\": \"azure\",\n  \"access_type\": \"RW\",\n  \"properties\":{\n    \"tenant_id\":\"{{tenant_id}}\",\n    \"client_id\":\"{{client_id}}\",\n    \"subscription_id\":\"{{subscription_id}}\",\n    \"client_secret\":\"{{client_secret}}\"\n  }\n}",
+        "context": "ProviderAccount",
+        "description": "azure_provider_account",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "tenant_id"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "client_id"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subscription_id"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "client_secret"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp05",
+        "type": "api",
+        "name": "kubernetes_provider_account",
+        "description": "quick_kubernetes_account",
+        "context": "ProviderAccount",
+        "templateData": "{\n  \"providerAccountName\": \"{{name}}\",\n  \"launchType\": \"quick\",\n  \"providerCode\": \"kubernetes\",\n  \"access_type\": \"RW\",\n  \"properties\":{\n    \"username\":\"{{username}}\",\n    \"password\":\"{{password}}\",\n    \"token\":\"{{token}}\",\n    \"tokenType\":\"{{tokenType}}\",\n    \"clusterName\":\"{{clusterName}}\"\n  }\n}",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "username"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "password"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "token"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "tokenType"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "clusterName"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp06",
+        "type": "api",
+        "templateData": "{\n  \"providerAccountName\": \"{{name}}\",\n  \"launchType\": \"quick\",\n  \"providerCode\": \"slack\",\n  \"access_type\": \"RW\",\n  \"properties\":{\n    \"token\":\"{{token}}\",\n    \"url\":\"{{url}}\",\n    \"botUser\":\"{{botUser}}\"\n  }\n}",
+        "name": "slack_provider_account",
+        "description": "quick_slack_provider_account",
+        "context": "ProviderAccount",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "token"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "url"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "botUser"
+            }
+        ]
+    },
+    {
+        "status": "Draft",
+        "code": "tmp07",
+        "type": "api",
+        "name": "aws_instance_resource_pool_template",
+        "description": "aws_instance_resource_pool",
+        "context": "ResourcePool",
+        "category": "Instance",
+        "templateData": "{\n  \"properties\": {\n    \"deleteOnTermination\": \"true\",\n    \"enableMonitoring\": \"false\",\n    \"terminationProtection\": \"false\"\n  },\n  \"launchType\": \"quick\",\n  \"providerProperties\": {\n    \"providerCode\": \"aws\",\n    \"properties\":{\n      \"secret\":\"{{secretKey}}\",\n      \"accessKey\":\"{{accessKey}}\",\n      \"description\":\"{{name}}\"\n    }\n  },\n  \"connectionType\": \"public\",\n  \"networkProperties\": {\n    \"network\": \"{{vpc}}\",\n    \"zone\": \"{{zone}}\",\n    \"subnet\": \"{{subnet}}\"\n  },\n  \"deploymentType\": \"public cloud\",\n  \"loadbalancerType\": \"NodePort\",\n  \"usageType\": \"public\",\n  \"version\": 1,\n  \"status\": \"Active\",\n  \"poolType\": \"Instance\",\n  \"accessType\": \"keypair\",\n  \"region\": \"{{region}}\",\n  \"resourcePoolName\": \"{{name}}\",\n  \"resourcePoolDescription\": \"{{name}}\"\n}",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "entity",
+                "name": "region",
+                "entityContext": "Region"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "vpc",
+                "placeHolder": "enter network"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "zone",
+                "placeHolder": "enter zone"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subnet",
+                "placeHolder": "enter subnet"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "accessKey",
+                "placeHolder": "enter access key"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "secretKey",
+                "placeHolder": "enter secret key"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp08",
+        "type": "api",
+        "name": "azure_instance_resource_pool_template",
+        "description": "azure_instance_resource_pool_template",
+        "context": "ResourcePool",
+        "category": "Instance",
+        "templateData": "{\n  \"properties\": {\n    \"deleteOnTermination\": \"true\",\n    \"enableMonitoring\": \"false\",\n    \"terminationProtection\": \"false\"\n  },\n  \"launchType\": \"quick\",\n  \"providerProperties\": {\n    \"providerCode\": \"azure\",\n    \"properties\":{\n      \"tenant_id\":\"{{tenant_id}}\",\n      \"client_id\":\"{{client_id}}\",\n      \"subscription_id\":\"{{subscription_id}}\",\n      \"client_secret\" : \"{{client_secret}}\"\n    }\n  },\n  \"vaultProperties\": {\n    \"vaultKey\": \"{{vaultKey}}\"\n},\n  \"connectionType\": \"public\",\n  \"networkProperties\": {\n    \"network\": \"{{vpc}}\",\n    \"zone\": \"{{zone}}\",\n    \"subnet\": \"{{subnet}}\"\n  },\n  \"deploymentType\": \"public cloud\",\n  \"loadbalancerType\": \"NodePort\",\n  \"usageType\": \"public\",\n  \"version\": 1,\n  \"status\": \"Active\",\n  \"poolType\": \"Instance\",\n  \"accessType\": \"password\",\n  \"region\": \"{{region}}\",\n  \"resourcePoolName\": \"{{name}}\",\n  \"resourcePoolDescription\": \"{{name}}\"\n}",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name",
+                "placeHolder": "enter name"
+            },
+            {
+                "required": true,
+                "type": "entity",
+                "name": "region",
+                "entityContext": "Region"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "vpc"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "zone"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subnet"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "tenant_id"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "client_id"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subscription_id"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "client_secret"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "vaultKey"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp09",
+        "type": "api",
+        "name": "application_template",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"applicationServices\": [\n    {\n      \"name\": \"app-api\",\n      \"description\": \"rest api\",\n      \"type\": \"Rest\",\n      \"category\": \"Software\"\n    },\n    {\n      \"name\": \"app-ui\",\n      \"description\": \"user interface\",\n      \"type\": \"Web\",\n      \"category\": \"Software\"\n    },\n    {\n      \"name\": \"app-db\",\n      \"description\": \"database\",\n      \"type\": \"Database\",\n      \"category\": \"Software\"\n    }\n  ],\n  \"applicationDependencies\": [\n  ],\n  \"flag\": {\n    \"externalFacing\": false,\n    \"socialMedia\": false\n  },\n  \"applicationName\": \"{{name}}\",\n  \"applicationShortName\": \"{{shortName}}\",\n  \"type\": \"Application\",\n  \"description\": \"{{name}}\",\n  \"classificationTemplate\": \"Consumer App\",\n  \"classification\": {\n    \"businessImpact\": \"Brand\",\n    \"category\": \"Consumer \",\n    \"classification\": \"Private \",\n    \"dataClassification\": \"Privacy \",\n    \"recoveryTier\": \"Critical-4Hrs \",\n    \"subCategory\": \"sales\"\n  },\n  \"deployment\": {\n    \"backupPolicy\": \"Daily \",\n    \"hostingModel\": \"Hybrid\",\n    \"hostingProvider\": \"External\",\n    \"maintananceWindow\": \"Weekend-S1 \",\n    \"scalingModel\": \"Manual \"\n  }\n}",
+        "description": "quick_application_template",
+        "context": "Application",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "shortName"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp10",
+        "type": "api",
+        "name": "aws_network_zone_template",
+        "description": "aws_network_zone_template",
+        "context": "NetworkZone",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"description\": \"{{name}}\",\n  \"providerCode\": \"aws\",\n  \"network\": \"{{vpc}}\",\n  \"subnet\": \"{{subnet}}\",\n  \"region\": \"{{region}}\",\n  \"zone\": \"{{zone}}\"\n}",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "entity",
+                "name": "region",
+                "entityContext": "Region"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "vpc"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subnet"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "zone"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp11",
+        "type": "api",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"description\": \"{{name}}\",\n  \"providerCode\": \"azure\",\n  \"network\": \"{{vpc}}\",\n  \"subnet\": \"{{subnet}}\",\n  \"region\": \"{{region}}\",\n  \"zone\": \"{{zone}}\"\n}",
+        "name": "azure_network_zone_template",
+        "description": "azure_network_zone_template",
+        "context": "NetworkZone",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "entity",
+                "name": "region",
+                "entityContext": "Region"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "vpc"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "zone"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subnet"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp12",
+        "type": "api",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"description\": \"{{name}}\",\n  \"providerCode\": \"aws\",\n  \"network\": \"{{vpc}}\",\n  \"subnet\": \"{{subnet}}\",\n  \"regionCode\": \"us-east-2\",\n  \"zone\": \"{{zone}}\"\n}",
+        "name": "aws_Ohio_network_zone",
+        "context": "NetworkZone",
+        "description": "aws_Ohio_network_zone",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "vpc"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subnet"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "zone"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp13",
+        "type": "api",
+        "name": "aws_N-Virginia_network_zone",
+        "description": "aws_N-Virginia_network_zone",
+        "context": "NetworkZone",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"description\": \"{{name}}\",\n  \"providerCode\": \"aws\",\n  \"network\": \"{{vpc}}\",\n  \"subnet\": \"{{subnet}}\",\n  \"regionCode\": \"us-east-1\",\n  \"zone\": \"{{zone}}\"\n}",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "vpc"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subnet"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "zone"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp14",
+        "type": "api",
+        "name": "aws_N-California_network_zone",
+        "description": "aws_N-California_network_zone",
+        "context": "NetworkZone",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"description\": \"{{name}}\",\n  \"providerCode\": \"aws\",\n  \"network\": \"{{vpc}}\",\n  \"subnet\": \"{{subnet}}\",\n  \"regionCode\": \"us-west-1\",\n  \"zone\": \"{{zone}}\"\n}",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "vpc"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subnet"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "zone"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp15",
+        "type": "api",
+        "name": "aws_Orgeon_network_zone",
+        "description": "aws_Orgeon_network_zone",
+        "context": "NetworkZone",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"description\": \"{{name}}\",\n  \"providerCode\": \"aws\",\n  \"network\": \"{{vpc}}\",\n  \"subnet\": \"{{subnet}}\",\n  \"regionCode\": \"us-west-2\",\n  \"zone\": \"{{zone}}\"\n}",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "vpc"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subnet"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "zone"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp16",
+        "type": "api",
+        "templateData": "{\n  \"properties\": {\n    \"deleteOnTermination\": \"true\",\n    \"enableMonitoring\": \"false\",\n    \"terminationProtection\": \"false\"\n  },\n  \"launchType\": \"quick\",\n  \"providerProperties\": {\n    \"providerCode\": \"aws\",\n    \"properties\":{\n      \"secret\":\"{{secretKey}}\",\n      \"accessKey\":\"{{accessKey}}\",\n      \"description\":\"{{name}}\"\n    }\n  },\n  \"connectionType\": \"public\",\n  \"networkProperties\": {\n    \"network\": \"{{vpc}}\",\n    \"zone\": \"{{zone}}\",\n    \"subnet\": \"{{subnet}}\"\n  },\n  \"deploymentType\": \"public cloud\",\n  \"loadbalancerType\": \"NodePort\",\n  \"usageType\": \"public\",\n  \"version\": 1,\n  \"status\": \"Active\",\n  \"poolType\": \"Instance\",\n  \"accessType\": \"keypair\",\n  \"regionCode\": \"us-west-2\",\n  \"resourcePoolName\": \"{{name}}\",\n  \"resourcePoolDescription\": \"{{name}}\"\n}",
+        "name": "aws_Orgeon_instance_resource_pool",
+        "description": "aws_Oregon_instance_resource_pool",
+        "context": "ResourcePool",
+        "category": "Instance",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "vpc"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "zone"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subnet"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "accessKey"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "secretKey"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp17",
+        "type": "api",
+        "name": "aws_N-California_instance_resource_pool",
+        "description": "aws_N-California_instance_resource_pool",
+        "context": "ResourcePool",
+        "category": "Instance",
+        "templateData": "{\n  \"properties\": {\n    \"deleteOnTermination\": \"true\",\n    \"enableMonitoring\": \"false\",\n    \"terminationProtection\": \"false\"\n  },\n  \"launchType\": \"quick\",\n  \"providerProperties\": {\n    \"providerCode\": \"aws\",\n    \"properties\":{\n      \"secret\":\"{{secretKey}}\",\n      \"accessKey\":\"{{accessKey}}\",\n      \"description\":\"{{name}}\"\n    }\n  },\n  \"connectionType\": \"public\",\n  \"networkProperties\": {\n    \"network\": \"{{vpc}}\",\n    \"zone\": \"{{zone}}\",\n    \"subnet\": \"{{subnet}}\"\n  },\n  \"deploymentType\": \"public cloud\",\n  \"loadbalancerType\": \"NodePort\",\n  \"usageType\": \"public\",\n  \"version\": 1,\n  \"status\": \"Active\",\n  \"poolType\": \"Instance\",\n  \"accessType\": \"keypair\",\n  \"regionCode\": \"us-west-1\",\n  \"resourcePoolName\": \"{{name}}\",\n  \"resourcePoolDescription\": \"{{name}}\"\n}",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "vpc"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "zone"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subnet"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "accessKey"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "secretKey"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp18",
+        "type": "api",
+        "templateData": "{\n  \"properties\": {\n    \"deleteOnTermination\": \"true\",\n    \"enableMonitoring\": \"false\",\n    \"terminationProtection\": \"false\"\n  },\n  \"launchType\": \"quick\",\n  \"providerProperties\": {\n    \"providerCode\": \"aws\",\n    \"properties\":{\n      \"secret\":\"{{secretKey}}\",\n      \"accessKey\":\"{{accessKey}}\",\n      \"description\":\"{{name}}\"\n    }\n  },\n  \"connectionType\": \"public\",\n  \"networkProperties\": {\n    \"network\": \"{{vpc}}\",\n    \"zone\": \"{{zone}}\",\n    \"subnet\": \"{{subnet}}\"\n  },\n  \"deploymentType\": \"public cloud\",\n  \"loadbalancerType\": \"NodePort\",\n  \"usageType\": \"public\",\n  \"version\": 1,\n  \"status\": \"Active\",\n  \"poolType\": \"Instance\",\n  \"accessType\": \"keypair\",\n  \"regionCode\": \"us-east-2\",\n  \"resourcePoolName\": \"{{name}}\",\n  \"resourcePoolDescription\": \"{{name}}\"\n}",
+        "name": "aws_Ohio_instance_resource_pool",
+        "description": "aws_Ohio_instance_resource_pool",
+        "context": "ResourcePool",
+        "category": "Instance",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "vpc"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "zone"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subnet"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "accessKey"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "secretKey"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp19",
+        "type": "api",
+        "name": "aws_N-Virginia_instance_resource_pool",
+        "context": "ResourcePool",
+        "category": "Instance",
+        "description": "aws_N-Virginia_instance_resource_pool",
+        "templateData": "{\n  \"properties\": {\n    \"deleteOnTermination\": \"true\",\n    \"enableMonitoring\": \"false\",\n    \"terminationProtection\": \"false\"\n  },\n  \"launchType\": \"quick\",\n  \"providerProperties\": {\n    \"providerCode\": \"aws\",\n    \"properties\":{\n      \"secret\":\"{{secretKey}}\",\n      \"accessKey\":\"{{accessKey}}\",\n      \"description\":\"{{name}}\"\n    }\n  },\n  \"connectionType\": \"public\",\n  \"networkProperties\": {\n    \"network\": \"{{vpc}}\",\n    \"zone\": \"{{zone}}\",\n    \"subnet\": \"{{subnet}}\"\n  },\n  \"deploymentType\": \"public cloud\",\n  \"loadbalancerType\": \"NodePort\",\n  \"usageType\": \"public\",\n  \"version\": 1,\n  \"status\": \"Active\",\n  \"poolType\": \"Instance\",\n  \"accessType\": \"keypair\",\n  \"regionCode\": \"us-east-1\",\n  \"resourcePoolName\": \"{{name}}\",\n  \"resourcePoolDescription\": \"{{name}}\"\n}",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "vpc"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "zone"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "subnet"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "accessKey"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "secretKey"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp20",
+        "type": "api",
+        "name": "support_group",
+        "description": "support_group",
+        "context": "Group",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"groupType\": \"Support Group\",\n  \"accessType\": \"Public\",\n  \"groupName\": \"{{name}}\",\n  \"groupDescription\": \"{{name}}\"\n}",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name",
+                "placeHolder": "enter group name"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp21",
+        "type": "api",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"roleName\": \"SoftwareEngineer\",\n  \"groupType\": \"Entitlement Group\",\n  \"accessType\": \"Public\",\n  \"groupName\": \"{{name}}\",\n  \"groupDescription\": \"{{name}}\"\n}",
+        "name": "software_engineer_group",
+        "description": "software_engineer_group",
+        "context": "Group",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp22",
+        "type": "api",
+        "name": "operations_engineer_group",
+        "description": "operations_engineer_group",
+        "context": "Group",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"roleName\": \"OperationsEngineer\",\n  \"groupType\": \"Entitlement Group\",\n  \"accessType\": \"Public\",\n  \"groupName\": \"{{name}}\",\n  \"groupDescription\": \"{{name}}\"\n}",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name",
+                "placeHolder": "enter groupName"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp23",
+        "type": "api",
+        "name": "platform_admin_group",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"roleName\": \"PlatformAdmin\",\n  \"groupType\": \"Entitlement Group\",\n  \"accessType\": \"Public\",\n  \"groupName\": \"{{name}}\",\n  \"groupDescription\": \"{{name}}\"\n}",
+        "context": "Group",
+        "description": "platform_admin_group",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp24",
+        "type": "api",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"type\": \"scm\",\n  \"description\": \"{{name}}\",\n  \"providerProperties\": {\n    \"providerCode\": \"github\",\n    \"properties\": {\n      \"token\": \"{{token}}\",\n      \"repositoryUrl\": \"{{repositoryUrl}}\"\n    }\n  }\n}",
+        "name": "github_service_pool",
+        "description": "github_service_pool",
+        "context": "ServicePool",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name",
+                "placeHolder": "enter service pool name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "token",
+                "placeHolder": "enter token"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "repositoryUrl",
+                "placeHolder": "enter repository url"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp25",
+        "type": "api",
+        "name": "artifactory_service_pool",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"type\": \"binaryrepo\",\n  \"description\": \"{{name}}\",\n  \"providerProperties\": {\n    \"providerCode\": \"artifactory\",\n    \"properties\": {\n      \"username\": \"{{username}}\",\n      \"password\": \"{{password}}\",\n      \"url\": \"{{url}}\"\n    }\n  }\n}",
+        "context": "ServicePool",
+        "description": "artifactory_service_pool",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "username"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "password"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "url"
+            }
+        ]
+    },
+    {
+        "status": "Published",
+        "code": "tmp26",
+        "type": "api",
+        "name": "jenkins_service_pool",
+        "description": "jenkins_service_pool",
+        "context": "ServicePool",
+        "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"type\": \"build\",\n  \"description\": \"{{name}}\",\n  \"providerProperties\": {\n    \"providerCode\": \"jenkins\",\n    \"properties\": {\n      \"username\": \"{{username}}\",\n      \"password\": \"{{password}}\",\n      \"host\": \"{{host}}\",\n      \"port\": \"{{port}}\"\n    }\n  }\n}",
+        "parameters": [
+            {
+                "required": true,
+                "type": "string",
+                "name": "name"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "username"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "password"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "host"
+            },
+            {
+                "required": true,
+                "type": "string",
+                "name": "port"
+            }
+        ]
+    }
+]
