@@ -2,7 +2,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp-30",
+        "code": "tmp-launch-01",
         "name": "aws_network_zone",
         "description": "aws_network_zone_template",
         "context": "NetworkZone",
@@ -39,7 +39,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp31",
+        "code": "tmp-launch-02",
         "type": "api",
         "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"description\": \"{{name}}\",\n  \"providerCode\": \"azure\",\n  \"network\": \"{{vpc}}\",\n  \"subnet\": \"{{subnet}}\",\n  \"region\": \"{{region}}\",\n  \"zone\": \"{{zone}}\"\n}",
         "name": "azure_network_zone",
@@ -78,7 +78,7 @@
         "entity": "Template",
         "status": "Published",
         "type": "api",
-        "code": "tmp32",
+        "code": "tmp-launch-03",
         "name": "aws_provider_account",
         "description": "aws_provider_account",
         "context": "ProviderAccount",
@@ -113,7 +113,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp33",
+        "code": "tmp-launch-04",
         "type": "api",
         "name": "azure_provider_account",
         "templateData": "{\n  \"providerAccountName\": \"{{name}}\",\n  \"launchType\": \"quick\",\n  \"providerCode\": \"azure\",\n  \"access_type\": \"RW\",\n  \"properties\":{\n    \"tenant_id\":\"{{tenant_id}}\",\n    \"client_id\":\"{{client_id}}\",\n    \"subscription_id\":\"{{subscription_id}}\",\n    \"client_secret\":\"{{client_secret}}\"\n  }\n}",
@@ -150,7 +150,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp34",
+        "code": "tmp-launch-05",
         "type": "api",
         "name": "kubernetes_provider_account",
         "description": "quick_kubernetes_account",
@@ -192,7 +192,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp35",
+        "code": "tmp-launch-06",
         "type": "api",
         "templateData": "{\n  \"providerAccountName\": \"{{name}}\",\n  \"launchType\": \"quick\",\n  \"providerCode\": \"slack\",\n  \"access_type\": \"RW\",\n  \"properties\":{\n    \"token\":\"{{token}}\",\n    \"url\":\"{{url}}\",\n    \"botUser\":\"{{botUser}}\"\n  }\n}",
         "name": "slack_provider_account",
@@ -224,7 +224,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp36",
+        "code": "tmp-launch-07",
         "type": "api",
         "name": "aws_instance_resource_pool_template",
         "description": "aws_instance_resource_pool",
@@ -278,7 +278,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp37",
+        "code": "tmp-launch-08",
         "type": "api",
         "name": "azure_instance_resource_pool_template",
         "description": "azure_instance_resource_pool_template",
@@ -343,7 +343,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp38",
+        "code": "tmp-launch-09",
         "type": "api",
         "name": "application_template",
         "templateData": "{\n  \"launchType\": \"quick\",\n  \"applicationServices\": [\n    {\n      \"name\": \"app-api\",\n      \"description\": \"rest api\",\n      \"type\": \"Rest\",\n      \"category\": \"Software\"\n    },\n    {\n      \"name\": \"app-ui\",\n      \"description\": \"user interface\",\n      \"type\": \"Web\",\n      \"category\": \"Software\"\n    },\n    {\n      \"name\": \"app-db\",\n      \"description\": \"database\",\n      \"type\": \"Database\",\n      \"category\": \"Software\"\n    }\n  ],\n  \"applicationDependencies\": [\n  ],\n  \"flag\": {\n    \"externalFacing\": false,\n    \"socialMedia\": false\n  },\n  \"applicationName\": \"{{name}}\",\n  \"applicationShortName\": \"{{shortName}}\",\n  \"type\": \"Application\",\n  \"description\": \"{{name}}\",\n  \"classificationTemplate\": \"Consumer App\",\n  \"classification\": {\n    \"businessImpact\": \"Brand\",\n    \"category\": \"Consumer \",\n    \"classification\": \"Private \",\n    \"dataClassification\": \"Privacy \",\n    \"recoveryTier\": \"Critical-4Hrs \",\n    \"subCategory\": \"sales\"\n  },\n  \"deployment\": {\n    \"backupPolicy\": \"Daily \",\n    \"hostingModel\": \"Hybrid\",\n    \"hostingProvider\": \"External\",\n    \"maintananceWindow\": \"Weekend-S1 \",\n    \"scalingModel\": \"Manual \"\n  }\n}",
@@ -365,7 +365,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp39",
+        "code": "tmp-launch-10",
         "type": "api",
         "name": "aws_network_zone_template",
         "description": "aws_network_zone_template",
@@ -403,7 +403,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp40",
+        "code": "tmp-launch-11",
         "type": "api",
         "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"description\": \"{{name}}\",\n  \"providerCode\": \"azure\",\n  \"network\": \"{{vpc}}\",\n  \"subnet\": \"{{subnet}}\",\n  \"region\": \"{{region}}\",\n  \"zone\": \"{{zone}}\"\n}",
         "name": "azure_network_zone_template",
@@ -441,7 +441,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp41",
+        "code": "tmp-launch-12",
         "type": "api",
         "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"description\": \"{{name}}\",\n  \"providerCode\": \"aws\",\n  \"network\": \"{{vpc}}\",\n  \"subnet\": \"{{subnet}}\",\n  \"regionCode\": \"us-east-2\",\n  \"zone\": \"{{zone}}\"\n}",
         "name": "aws_Ohio_network_zone",
@@ -473,7 +473,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp42",
+        "code": "tmp-launch-13",
         "type": "api",
         "name": "aws_N-Virginia_network_zone",
         "description": "aws_N-Virginia_network_zone",
@@ -505,7 +505,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp43",
+        "code": "tmp-launch-14",
         "type": "api",
         "name": "aws_N-California_network_zone",
         "description": "aws_N-California_network_zone",
@@ -537,7 +537,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp44",
+        "code": "tmp-launch-15",
         "type": "api",
         "name": "aws_Orgeon_network_zone",
         "description": "aws_Orgeon_network_zone",
@@ -569,7 +569,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp45",
+        "code": "tmp-launch-16",
         "type": "api",
         "templateData": "{\n  \"properties\": {\n    \"deleteOnTermination\": \"true\",\n    \"enableMonitoring\": \"false\",\n    \"terminationProtection\": \"false\"\n  },\n  \"launchType\": \"quick\",\n  \"providerProperties\": {\n    \"providerCode\": \"aws\",\n    \"properties\":{\n      \"secret\":\"{{secretKey}}\",\n      \"accessKey\":\"{{accessKey}}\",\n      \"description\":\"{{name}}\"\n    }\n  },\n  \"connectionType\": \"public\",\n  \"networkProperties\": {\n    \"network\": \"{{vpc}}\",\n    \"zone\": \"{{zone}}\",\n    \"subnet\": \"{{subnet}}\"\n  },\n  \"deploymentType\": \"public cloud\",\n  \"loadbalancerType\": \"NodePort\",\n  \"usageType\": \"public\",\n  \"version\": 1,\n  \"status\": \"Active\",\n  \"poolType\": \"Instance\",\n  \"accessType\": \"keypair\",\n  \"regionCode\": \"us-west-2\",\n  \"resourcePoolName\": \"{{name}}\",\n  \"resourcePoolDescription\": \"{{name}}\"\n}",
         "name": "aws_Orgeon_instance_resource_pool",
@@ -612,7 +612,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp46",
+        "code": "tmp-launch-17",
         "type": "api",
         "name": "aws_N-California_instance_resource_pool",
         "description": "aws_N-California_instance_resource_pool",
@@ -655,7 +655,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp47",
+        "code": "tmp-launch-18",
         "type": "api",
         "templateData": "{\n  \"properties\": {\n    \"deleteOnTermination\": \"true\",\n    \"enableMonitoring\": \"false\",\n    \"terminationProtection\": \"false\"\n  },\n  \"launchType\": \"quick\",\n  \"providerProperties\": {\n    \"providerCode\": \"aws\",\n    \"properties\":{\n      \"secret\":\"{{secretKey}}\",\n      \"accessKey\":\"{{accessKey}}\",\n      \"description\":\"{{name}}\"\n    }\n  },\n  \"connectionType\": \"public\",\n  \"networkProperties\": {\n    \"network\": \"{{vpc}}\",\n    \"zone\": \"{{zone}}\",\n    \"subnet\": \"{{subnet}}\"\n  },\n  \"deploymentType\": \"public cloud\",\n  \"loadbalancerType\": \"NodePort\",\n  \"usageType\": \"public\",\n  \"version\": 1,\n  \"status\": \"Active\",\n  \"poolType\": \"Instance\",\n  \"accessType\": \"keypair\",\n  \"regionCode\": \"us-east-2\",\n  \"resourcePoolName\": \"{{name}}\",\n  \"resourcePoolDescription\": \"{{name}}\"\n}",
         "name": "aws_Ohio_instance_resource_pool",
@@ -698,7 +698,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp48",
+        "code": "tmp-launch-19",
         "type": "api",
         "name": "aws_N-Virginia_instance_resource_pool",
         "context": "ResourcePool",
@@ -741,7 +741,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp49",
+        "code": "tmp-launch-20",
         "type": "api",
         "name": "support_group",
         "description": "support_group",
@@ -759,7 +759,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp50",
+        "code": "tmp-launch-21",
         "type": "api",
         "templateData": "{\n  \"launchType\": \"quick\",\n  \"roleName\": \"SoftwareEngineer\",\n  \"groupType\": \"Entitlement Group\",\n  \"accessType\": \"Public\",\n  \"groupName\": \"{{name}}\",\n  \"groupDescription\": \"{{name}}\"\n}",
         "name": "software_engineer_group",
@@ -776,7 +776,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp51",
+        "code": "tmp-launch-22",
         "type": "api",
         "name": "operations_engineer_group",
         "description": "operations_engineer_group",
@@ -794,7 +794,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp52",
+        "code": "tmp-launch-23",
         "type": "api",
         "name": "platform_admin_group",
         "templateData": "{\n  \"launchType\": \"quick\",\n  \"roleName\": \"PlatformAdmin\",\n  \"groupType\": \"Entitlement Group\",\n  \"accessType\": \"Public\",\n  \"groupName\": \"{{name}}\",\n  \"groupDescription\": \"{{name}}\"\n}",
@@ -811,7 +811,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp53",
+        "code": "tmp-launch-24",
         "type": "api",
         "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"type\": \"scm\",\n  \"description\": \"{{name}}\",\n  \"providerProperties\": {\n    \"providerCode\": \"github\",\n    \"properties\": {\n      \"token\": \"{{token}}\",\n      \"repositoryUrl\": \"{{repositoryUrl}}\"\n    }\n  }\n}",
         "name": "github_service_pool",
@@ -841,7 +841,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp54",
+        "code": "tmp-launch-25",
         "type": "api",
         "name": "artifactory_service_pool",
         "templateData": "{\n  \"launchType\": \"quick\",\n  \"name\": \"{{name}}\",\n  \"type\": \"binaryrepo\",\n  \"description\": \"{{name}}\",\n  \"providerProperties\": {\n    \"providerCode\": \"artifactory\",\n    \"properties\": {\n      \"username\": \"{{username}}\",\n      \"password\": \"{{password}}\",\n      \"url\": \"{{url}}\"\n    }\n  }\n}",
@@ -873,7 +873,7 @@
     {
         "entity": "Template",
         "status": "Published",
-        "code": "tmp55",
+        "code": "tmp-launch-26",
         "type": "api",
         "name": "jenkins_service_pool",
         "description": "jenkins_service_pool",
