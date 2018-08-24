@@ -1,6 +1,7 @@
 [
     {
         "entity": "Template",
+        "type": "api",
         "status": "Published",
         "code": "tmp-launch-01",
         "name": "aws_network_zone",
